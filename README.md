@@ -1,0 +1,1 @@
+Our current MISSION is to help those who can benefit from cognative improvements with visual, auditory, and motion stimulus. Engaging visual content tap into positive memory receptors, and enhanced stimulus to these interactions. Adaptive learning systems incorporate the experiences of the past, enable present interaction and foster future positive experiences.
