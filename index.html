@@ -3,197 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adaptive Tech USA | Cognitive Enhancement Through Technology</title>
-    <meta name="description" content="Helping people with cognitive impairments through visual, auditory, and motion stimulus technology. Adaptive learning systems for positive outcomes.">
+    <title>Adaptive Tech USA - Interactive Technology for Enhanced Care</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #1f2937;
-            background: #ffffff;
+        :root {
+            /* Material Design 3 Color System */
+            --md-sys-color-primary: #00639B;
+            --md-sys-color-on-primary: #FFFFFF;
+            --md-sys-color-primary-container: #CCE5FF;
+            --md-sys-color-on-primary-container: #001D32;
+            
+            --md-sys-color-secondary: #535F70;
+            --md-sys-color-on-secondary: #FFFFFF;
+            --md-sys-color-secondary-container: #D8E4F2;
+            --md-sys-color-on-secondary-container: #101C2B;
+            
+            --md-sys-color-tertiary: #6B5778;
+            --md-sys-color-on-tertiary: #FFFFFF;
+            --md-sys-color-tertiary-container: #F2DCFF;
+            --md-sys-color-on-tertiary-container: #251433;
+            
+            --md-sys-color-surface: #FAFBFC;
+            --md-sys-color-surface-variant: #E0E2E7;
+            --md-sys-color-on-surface: #191C1E;
+            --md-sys-color-on-surface-variant: #41484D;
+            
+            --md-sys-color-background: #FAFBFC;
+            --md-sys-color-outline: #72787E;
+            --md-sys-color-shadow: #000000;
+            
+            /* Elevation */
+            --md-sys-elevation-1: 0 1px 2px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
+            --md-sys-elevation-2: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.03);
+            --md-sys-elevation-3: 0 10px 20px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.08);
+            
+            /* Shape */
+            --md-sys-shape-corner-small: 8px;
+            --md-sys-shape-corner-medium: 12px;
+            --md-sys-shape-corner-large: 28px;
+            --md-sys-shape-corner-full: 50%;
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
         
-        header {
-            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-            color: white;
-            padding: 1rem 0;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto Flex', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-surface);
+            line-height: 1.6;
+        }
+        
+        /* App Bar / Navigation */
+        .app-bar {
+            background-color: var(--md-sys-color-surface);
+            padding: 16px 32px;
+            box-shadow: var(--md-sys-elevation-1);
             position: fixed;
-            width: 100%;
             top: 0;
+            width: 100%;
             z-index: 100;
-        }
-        nav {
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            align-items: center;
         }
+        
         .logo {
-            font-size: 1.25rem;
-            font-weight: 700;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--md-sys-color-primary);
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 12px;
+            text-decoration: none;
         }
-        .logo-icon { font-size: 1.5rem; }
+        
+        .logo .material-icons {
+            font-size: 32px;
+        }
+        
         .nav-links {
             display: flex;
-            gap: 2rem;
-            list-style: none;
+            gap: 32px;
         }
+        
         .nav-links a {
-            color: white;
+            color: var(--md-sys-color-on-surface-variant);
             text-decoration: none;
             font-weight: 500;
-            transition: opacity 0.3s;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
         }
-        .nav-links a:hover { opacity: 0.8; }
         
+        .nav-links a:hover {
+            color: var(--md-sys-color-primary);
+        }
+        
+        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-            color: white;
-            padding: 8rem 0 4rem;
-            margin-top: 60px;
+            margin-top: 64px;
+            padding: 120px 32px;
             text-align: center;
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-        .hero p {
-            font-size: 1.125rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #2563eb;
-            padding: 0.875rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            background: linear-gradient(135deg, var(--md-sys-color-primary-container) 0%, var(--md-sys-color-surface) 100%);
+            position: relative;
+            overflow: hidden;
         }
         
-        .features {
-            padding: 4rem 0;
-            background: #f8fafc;
-        }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        .feature-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        .feature-card h3 {
-            color: #2563eb;
-            margin-bottom: 0.5rem;
-            font-size: 1.125rem;
-        }
-        .feature-card p {
-            color: #6b7280;
-            font-size: 0.95rem;
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--md-sys-color-tertiary-container) 0%, transparent 70%);
+            opacity: 0.5;
         }
         
-        .mission {
-            padding: 4rem 0;
-            text-align: center;
-        }
-        .mission h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
-        .mission-text {
-            max-width: 700px;
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
             margin: 0 auto;
-            font-size: 1rem;
-            color: #6b7280;
-            line-height: 1.8;
         }
         
-        footer {
-            background: #1f2937;
-            color: white;
-            padding: 2rem 0;
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--md-sys-color-on-surface);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            color: var(--md-sys-color-on-surface-variant);
+            margin-bottom: 32px;
+            font-weight: 400;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--md-sys-color-primary-container);
+            color: var(--md-sys-color-on-primary-container);
+            padding: 8px 20px;
+            border-radius: var(--md-sys-shape-corner-full);
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+        
+        /* Material Buttons */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            border: none;
+            border-radius: var(--md-sys-shape-corner-full);
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .button-filled {
+            background-color: var(--md-sys-color-primary);
+            color: var(--md-sys-color-on-primary);
+            box-shadow: var(--md-sys-elevation-1);
+        }
+        
+        .button-filled:hover {
+            background-color: #005a8c;
+            box-shadow: var(--md-sys-elevation-2);
+        }
+        
+        .button-tonal {
+            background-color: var(--md-sys-color-secondary-container);
+            color: var(--md-sys-color-on-secondary-container);
+        }
+        
+        .button-tonal:hover {
+            background-color: #cbd8e6;
+        }
+        
+        /* Cards Section */
+        .section {
+            padding: 96px 32px;
+        }
+        
+        .section-header {
             text-align: center;
+            max-width: 700px;
+            margin: 0 auto 64px;
         }
-        footer p { opacity: 0.8; }
         
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 1.75rem; }
-            .nav-links { display: none; }
+        .section-header h2 {
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--md-sys-color-on-surface);
         }
-    </style>
-</head>
-<body>
-    <header>
-        <nav class="container">
-            <div class="logo">
-                <span class="logo-icon">🧠</span>
-                <span>Adaptive Tech USA</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#mission">Mission</a></li>
-                <li><a href="#services">Services</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section class="hero">
-        <div class="container">
-            <h1>Enhancing Lives Through<br>Adaptive Technology</h1>
-            <p>We help individuals with cognitive impairments through visual, auditory, and motion stimulus systems.</p>
-            <a href="#contact" class="cta-button">Contact Us</a>
-        </div>
-    </section>
-    
-    <section id="services" class="features">
-        <div class="container">
-            <h2 style="text-align: center; font-size: 1.75rem;">Our Approach</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Visual Systems</h3>
-                    <p>Engaging visual content designed to stimulate positive memory receptors and cognitive engagement.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Auditory Solutions</h3>
-                    <p>Enhanced audio experiences that foster learning and positive cognitive responses.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Motion Integration</h3>
-                    <p>Interactive motion-based systems that promote active participation and motor skill development.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="mission" class="mission">
-        <div class="container">
-            <h2>Our Mission</h2>
-            <p class="mission-text">
-                Our mission is to help those who can benefit from cognitive improvements with visual, 
-                auditory, and motion stimulus. Engaging visual content taps into positive memory receptors 
-                and enhanced stimulus for these interactions. Adaptive learning systems incorporate the 
-                experiences of the past, enable present interaction, and foster future positive experiences.
-            </p>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <p>© 2026 Adaptive Tech USA. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
+        
+        .section-header p {
+            font-size: 18px;
+            color: var(--md-sys-color-on-surface-variant);
+            line-height: 1.6;
+        }
+        
+        /* Cards Container */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 32px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Material Card */
+        .card {
+            background: var(--md-sys-color-surface);
+            border-radius: var(--md-sys-shape-corner-large);
+            box-shadow: var(--md-sys-elevation-1);
+            overflow: hidden
